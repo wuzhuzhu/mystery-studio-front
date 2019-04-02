@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "mystery-studio-front",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A designer studio fontend based on gatsby.js",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Walter <walterr@live.cn>",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
     "gatsby-plugin-manifest": "^2.0.25",
@@ -15,10 +16,13 @@
     "gatsby-transformer-sharp": "^2.1.17",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "gatsby-plugin-less": "^2.0.12",
+    "less": "^3.9.0",
     "prettier": "^1.16.4"
   },
   "keywords": [
@@ -27,7 +31,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
