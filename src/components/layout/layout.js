@@ -9,16 +9,20 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "../header"
 import "./layout.css"
-import "../styles/intro07.less"
-// import "../styles/main.css"
-import "../styles/main-bg.css"
-import "../styles/main-responsive.css"
-import "../styles/color.less"
+import "../../styles/intro07.less"
+import "../../styles/main.css"
+import "../../styles/main-bg.css"
+import "../../styles/navmenu.css"
+import "../../styles/main-responsive.css"
+import "../../styles/color.less"
 // 英文字体不适用
 // import "../styles/fonts.less"
 
+import StickyFrame from './sticky-frame'
+// 左侧伸缩导航菜单
+import NavMenu from './nav-menu'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,21 +43,10 @@ const Layout = ({ children }) => {
         crossOrigin="anonymous"
       />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        id="wrapper"
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <div>
+        <StickyFrame />
+        <NavMenu />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
     </>
   )

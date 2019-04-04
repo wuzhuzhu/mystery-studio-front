@@ -25,7 +25,7 @@
 /* 01 - LAYOUT INITIALIZATION & COLOR PRESETS */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 html,body{
-	overflow-x:hidden !important; 
+	overflow-x:hidden !important;
     margin: 0px;
     padding: 0px;
 }
@@ -37,8 +37,8 @@ body
 a, a:hover, a:focus{
 	text-decoration: none;
 }
-a:focus { 
-    	outline: none; 
+a:focus {
+    	outline: none;
 }
 .animated{
 	visibility: hidden;
@@ -151,10 +151,10 @@ h1,h2,h3,h4,h5,h6{
 	top: 0;
 	left: 0;
 }
-.poster-img{
+/*.poster-img{
 	background:url(../images/poster.jpg) center center no-repeat !important;
 	background-size: cover !important;
-}
+}*/
 .super-space{
 	margin-top: 500px;
 }
@@ -700,14 +700,14 @@ h1,h2,h3,h4,h5,h6{
         .works-item-inner{
             text-align: center;
         }
-        .works-item-inner h3{ 
+        .works-item-inner h3{
             font-size: 14px;
             line-height: 21px;
             margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 4px;
         }
-        .works-item-inner p > span{  
+        .works-item-inner p > span{
             font-size: 14px;
             font-weight: 200;
             line-height: 21px;
