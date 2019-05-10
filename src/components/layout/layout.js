@@ -32,6 +32,14 @@ const Layout = ({ children }) => {
   const [ { isDrawerOpen } , setState ] = useState({
     isDrawerOpen: true
   })
+  const onDrawerChange = (e) => {
+    setState(
+      state => ({
+        ...state,
+        isDrawerOpen: e
+      })
+    )
+  }
   const data = useStaticQuery(graphql`
       query SiteTitleQuery {
         site {
@@ -61,6 +69,7 @@ const Layout = ({ children }) => {
         <Drawer
           open={isDrawerOpen}
           zIndex={ZINDEX_MAP['drawer']}
+          onChange={onDrawerChange}
         >
           <NavMenu />
         </Drawer>
