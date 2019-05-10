@@ -1,20 +1,10 @@
 import React from 'react'
 
 const NavMenu = () => (
-  <>
-    <div className="main-nav visible-lg">
-      <div className="mobile-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
+  <div>
     <section className="menu-panel menu-bg fullheight">
 
       <div className="row">
-
-
         <article className="col-md-12 fullheight nav-list-holder">
           <div className="valign">
             <nav className="nav-item-wrap">
@@ -70,7 +60,7 @@ const NavMenu = () => (
 
       </div>
     </section>
-  </>
+  </div>
 )
 
 export default NavMenu

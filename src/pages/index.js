@@ -2,11 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import Button from 'react-bootstrap/Button'
 
-import Layout from "../components/layout/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "~components/layout/layout"
+import Image from "~components/image"
+import SEO from "~components/seo"
 
-import "../styles/intro07.less"
+import "~styles/intro07.less"
 
 const IndexPage = () => (
   <Layout>
