@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Drawer from 'react-motion-drawer';
 
 import Header from "../header"
-import "./layout.css"
+import "./layout.less"
 import "~styles/intro07.less"
 import "~styles/main.css"
 import "~styles/main-bg.css"
@@ -30,7 +30,7 @@ import NavMenuToggle from './nav-menu-toggle'
 
 const Layout = ({ children }) => {
   const [ { isDrawerOpen } , setState ] = useState({
-    isDrawerOpen: true
+    isDrawerOpen: false
   })
   const onDrawerChange = (e) => {
     setState(
@@ -70,6 +70,7 @@ const Layout = ({ children }) => {
           open={isDrawerOpen}
           zIndex={ZINDEX_MAP['drawer']}
           onChange={onDrawerChange}
+          width={500}
         >
           <NavMenu />
         </Drawer>
