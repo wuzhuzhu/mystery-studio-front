@@ -16,7 +16,7 @@ import "./layout.less"
 import "~styles/intro07.less"
 import "~styles/main.css"
 import "~styles/main-bg.css"
-import "~styles/navmenu.css"
+import "~styles/navmenu.less"
 import "~styles/main-responsive.css"
 import "~styles/color.less"
 import ZINDEX_MAP from '~config/constants/z-index'
@@ -45,6 +45,7 @@ const Layout = ({ children }) => {
         site {
           siteMetadata {
             title
+            description
           }
         }
       }
@@ -57,7 +58,6 @@ const Layout = ({ children }) => {
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossOrigin="anonymous"
       />
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div>
         <StickyFrame />
         <NavMenuToggle
@@ -70,11 +70,11 @@ const Layout = ({ children }) => {
           open={isDrawerOpen}
           zIndex={ZINDEX_MAP['drawer']}
           onChange={onDrawerChange}
-          width={500}
+          width={400}
         >
           <NavMenu />
         </Drawer>
-        <main>{children}</main>
+        <main id="page-content-wrapper">{children}</main>
       </div>
     </>
   )

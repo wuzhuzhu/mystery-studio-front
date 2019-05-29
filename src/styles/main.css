@@ -186,6 +186,10 @@ h1,h2,h3,h4,h5,h6{
 .main-logo{
 	margin-top: 6px;
 }
+img.main-logo.img-responsive {
+	height: 90px;
+	width: 90px;
+}
 .mastfoot.space-top{
 	margin-top: 600px;
 }

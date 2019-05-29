@@ -7,11 +7,16 @@ import Image from "~components/image"
 import SEO from "~components/seo"
 
 import "~styles/intro07.less"
+import Header from "../components/header"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="intro-07-wrap">
+      <Header
+        siteTitle="Mystery studio"
+        desc="撒旦法离开家骷髅精灵"
+      />
       <div>
         <Button variant="primary">Primary</Button>
         <h1>Hi people</h1>

@@ -61,8 +61,8 @@
 
 
 .menu-panel{
-  width: 500px;
-    height: 100%;
+  width: 400px;
+  height: 100%;
   position: fixed;
   top: 0;
   /*left: -500px;*/
@@ -70,6 +70,10 @@
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
+
+  .row {
+    height: 100%;
+  }
 }
 .menu-bg{
   background-size: cover !important;
@@ -124,8 +128,8 @@
      padding: 0;
      margin-bottom: 25px;
 }
-.main-nav-menu li a.main-nav-link{
-     font-weight: 200;
+.main-nav-menu li span.main-nav-link{
+     font-weight: 400;
      font-size: 16px;
      line-height: 23px;
      text-transform: uppercase;
@@ -137,14 +141,14 @@
          -o-transition: all .8s linear;
             transition: all .8s linear;
 }
-.main-nav-menu li a.main-nav-link:hover{
+.main-nav-menu li span.main-nav-link:hover{
     -webkit-transition: all .8s linear;
        -moz-transition: all .8s linear;
         -ms-transition: all .8s linear;
          -o-transition: all .8s linear;
             transition: all .8s linear;
 }
-.main-nav-menu li a.main-nav-link:focus{
+.main-nav-menu li span.main-nav-link:focus{
   font-weight: 200;
   border-bottom: solid 4px;
     -webkit-transition: all .8s linear;
