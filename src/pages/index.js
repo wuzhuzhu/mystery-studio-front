@@ -3,30 +3,31 @@ import { Link } from "gatsby"
 import Button from 'react-bootstrap/Button'
 
 import Layout from "~components/layout/layout"
+import CarouselBg from "~components/layout/carousel-bg"
 import Image from "~components/image"
 import SEO from "~components/seo"
+import BackGroundSection from '~components/background-section'
 
 import "~styles/intro07.less"
+import "./index.less"
 import Header from "../components/header"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div className="intro-07-wrap">
+    <div className="page-index-wrap">
       <Header
         siteTitle="Mystery studio"
         desc="撒旦法离开家骷髅精灵"
       />
-      <div>
+      <CarouselBg />
+      <section id="mastwrap" className="mastwrap slant-bottom slant-bottom-white">
         <Button variant="primary">Primary</Button>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <Image />
         </div>
         <Link to="/page-2/">Go to page 2</Link>
-      </div>
+      </section>
     </div>
   </Layout>
 )

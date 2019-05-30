@@ -13,6 +13,15 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        ignore: [`**/\.*`],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `settings`,
+        path: `${__dirname}/src/settings`,
+        ignore: [`**/\.*`],
       },
     },
     `gatsby-transformer-sharp`,
