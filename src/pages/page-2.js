@@ -1,16 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
+import Header from "../components/header"
 
-const SecondPage = () => (
+import Test from '../components/page-2-text'
+
+const SecondPage = ({ data }) => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Header
+      siteTitle="Mystery studio"
+      desc="撒旦法离开家骷髅精灵"
+    />
+    <div className="container">
+      <h1>{data.site.siteMetadata.title}</h1>
+      <h1>{data.sitePage.id}</h1>
+      <Test></Test>
+    </div>
+
+
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    sitePage {
+      id 
+    }
+  }
+`
 
 export default SecondPage

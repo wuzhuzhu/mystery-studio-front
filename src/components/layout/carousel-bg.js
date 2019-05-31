@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react"
 
 const CaouselBg = () => {
-  const [ active, setActive ] = useState(0)
+  const [ count, setCount ] = useState(0)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setActive(active + 1);
-    }, 2000);
-    return () => window.clearTimeout(timer);
-  }, []);
+    const id = setInterval(() => {
+      setCount(prevCount => prevCount + 1)
+    }, 1000)
+    return () => clearInterval(id)
+  }, [count])
 
   return (
     <div>
-      当前激活{ active }
+      当前激活{ count }
     </div>
   )
 }
