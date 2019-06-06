@@ -24,6 +24,15 @@ module.exports = {
         ignore: [`**/\.*`],
       },
     },
+    {
+      resolve: 'gatsby-source-s3-image',
+      options: {
+        bucketName: 'mystery-studio',
+        domain: 'oss-cn-beijing.aliyuncs.com', // [optional] Not necessary to define for AWS S3; defaults to `s3.amazonaws.com`
+        protocol: 'http', // [optional] Default to `https`.
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

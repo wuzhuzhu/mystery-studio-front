@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+
+import { useTimer } from "../utils/hooks/timer"
 
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-    allFile(filter: { extension: { eq: "jpg" }}) {
+    allFile(filter: { extension: { eq: "md" }}) {
     edges {
       node {
 				relativePath
@@ -20,11 +22,11 @@ export default () => {
     }
   `)
 
-  console.log(data)
-
   return (
     <div>
-      test
+      <ul>
+        { data.allFile.edges.map(({ node }, index) => <li key={`file-${index}`}>{index+1}, {node.relativePath}: {node.prettySize}</li>) }
+      </ul>
     </div>
   )
 }
