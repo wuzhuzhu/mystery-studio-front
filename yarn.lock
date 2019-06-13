@@ -1850,7 +1850,7 @@ boolbase@^1.0.0, boolbase@~1.0.0:
 
 bootstrap@^4.3.1:
   version "4.3.1"
-  resolved "http://registry.npm.taobao.org/bootstrap/download/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  resolved "https://registry.npm.taobao.org/bootstrap/download/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
   integrity sha1-KAyo9hBQTZnXtrS/xLaM7GAXBKw=
 
 boxen@^1.2.1:

@@ -3,6 +3,7 @@ module.exports = {
     title: `Mystery Studio`,
     description: `觅觉设计工作室`,
     author: `Mystery Studio Inc. All rights reserved @2019`,
+    menuBackGround: '//images.unsplash.com/photo-1557215600-03b1566b1e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=875&q=80',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

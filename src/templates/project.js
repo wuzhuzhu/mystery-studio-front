@@ -4,6 +4,8 @@ import Header from "~components/header"
 import { graphql } from 'gatsby'
 
 import ProjectIntro from '~components/project/project-intro'
+import ProjectContent from '~components/project/project-content'
+import ProjectPagination from '~components/project/project-pagination'
 
 const ProjectTemplate = ({ data }) => {
   const { html, frontmatter: {  title, description, category, subCategory, slug ,date }} = data.markdownRemark
@@ -18,11 +20,9 @@ const ProjectTemplate = ({ data }) => {
       </div>
       <section id="mastwrap" className="mastwrap slant-bottom slant-bottom-color">
         <ProjectIntro {...data.markdownRemark.frontmatter} />
+        <ProjectContent />
+        <ProjectPagination />
       </section>
-      <div>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
     </Layout>
   )
 }

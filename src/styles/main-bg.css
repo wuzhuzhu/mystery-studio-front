@@ -57,5 +57,5 @@
 /* MISC ELEMENTS */
 /*--------------------------------------------------------------*/
 .menu-bg{
-	background:url('//images.unsplash.com/photo-1557215600-03b1566b1e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=875&q=80');
+	background-image: url('../images/background/menu-bg.jpg');
 }

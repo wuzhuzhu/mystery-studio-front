@@ -4,7 +4,12 @@ import { Link } from "gatsby"
 import logoImg from '~images/logo.png'
 
 const NavMenu = () => (
-  <section className="menu-panel menu-bg fullheight">
+  <section
+    className="menu-panel menu-bg fullheight"
+    style={{
+      
+    }}
+  >
     <div className="row">
       <article className="col-md-12 fullheight nav-list-holder">
         <div className="valign">

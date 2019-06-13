@@ -7,7 +7,7 @@
 
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import SEO from "~components/seo"
 
 import Drawer from 'react-motion-drawer';
 
@@ -20,7 +20,7 @@ import "~styles/main-responsive.css"
 import "~styles/color.less"
 import ZINDEX_MAP from '~config/constants/z-index'
 // 英文字体不适用
-// import "../styles/fonts.less"
+import "~styles/fonts.less"
 
 import StickyFrame from './sticky-frame'
 // 左侧伸缩导航菜单
@@ -39,24 +39,9 @@ const Layout = ({ children }) => {
       })
     )
   }
-  const data = useStaticQuery(graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
-      }
-    `)
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="//cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossOrigin="anonymous"
-      />
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div>
         <StickyFrame />
         <NavMenuToggle
@@ -74,7 +59,9 @@ const Layout = ({ children }) => {
           <NavMenu />
         </Drawer>
         <main id="page-content-wrapper">
-          {children}
+          <div className="page-background-container">
+            {children}
+          </div>
         </main>
       </div>
     </>

@@ -5,7 +5,7 @@ import Layout from "~components/layout/layout"
 // import CarouselBg from "~components/layout/carousel-bg"
 // import Image from "~components/image"
 // import BackGroundSection from '~components/background-section'
-import SEO from "~components/seo"
+
 
 import "~styles/intro07.less"
 import "./index.less"
@@ -13,7 +13,6 @@ import Header from "../components/header"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="page-index-wrap">
       <Header
         siteTitle="Mystery studio"
@@ -53,8 +52,6 @@ const IndexPage = () => (
           </div>
         </section>
       </section>
-
-
     </div>
   </Layout>
 )

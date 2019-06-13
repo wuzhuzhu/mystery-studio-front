@@ -12,8 +12,9 @@ const SecondPage = ({ data }) => {
       <Header
         siteTitle={title}
         desc={description}
+        whiteBg
       />
-      <div className="container">
+      <div className="container white-bg">
         <h1>{data.site.siteMetadata.title}</h1>
         <h1>{data.sitePage.id}</h1>
         <Test></Test>
