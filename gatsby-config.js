@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Mystery Studio`,
-    description: `Kick off your next, great Gatsby project with this default starter.`,
-    author: `@Mystery Studio Inc.`,
+    description: `觅觉设计工作室`,
+    author: `Mystery Studio Inc. All rights reserved @2019`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,14 +22,6 @@ module.exports = {
         name: `settings`,
         path: `${__dirname}/src/settings`,
         ignore: [`**/\.*`],
-      },
-    },
-    {
-      resolve: 'gatsby-source-s3-image',
-      options: {
-        bucketName: 'mystery-studio',
-        domain: 'oss-cn-beijing.aliyuncs.com', // [optional] Not necessary to define for AWS S3; defaults to `s3.amazonaws.com`
-        protocol: 'http', // [optional] Default to `https`.
       },
     },
     `gatsby-transformer-remark`,

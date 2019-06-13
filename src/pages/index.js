@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby'
 
 import Layout from "~components/layout/layout"
-import CarouselBg from "~components/layout/carousel-bg"
+// import CarouselBg from "~components/layout/carousel-bg"
 // import Image from "~components/image"
 // import BackGroundSection from '~components/background-section'
 import SEO from "~components/seo"
@@ -17,7 +17,7 @@ const IndexPage = () => (
     <div className="page-index-wrap">
       <Header
         siteTitle="Mystery studio"
-        desc="撒旦法离开家骷髅精灵"
+        desc="觅觉设计工作室"
         whiteBg
       />
       <section id="mastwrap" className="mastwrap slant-bottom slant-bottom-white">
@@ -27,7 +27,6 @@ const IndexPage = () => (
               <article className="text-left col-md-12">
                 <h1 className="main-heading"><span className="black font4">您好，我们是Mystery Studio，<em
                   className="dark font3 weight-light">可能是京城最好的独立设计工作室</em></span></h1>
-                <Link to="page-2"><h1>第二页</h1></Link>
               </article>
             </div>
           </div>

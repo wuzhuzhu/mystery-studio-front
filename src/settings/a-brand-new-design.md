@@ -1,6 +1,10 @@
 ---
-title: "我们是最好的"
-description: "能不能这样一点点"
+title: "W酒店"
+description: "一个融合现代风格的酒店设计"
+category: "设计"
+subCategory: "建筑"
+slug: "hotel-w-design"
+date: "2019-08-21"
 ---
 
 **为什么在组件内部**调用 useEffect？ 将 useEffect 放在组件内部让我们可以在 effect 中直接访问 count state 变量（或其他 props）。我们不需要特殊的 API 来读取它 —— 它已经保存在函数作用域中。Hook 使用了 JavaScript 的闭包机制，而不用在 JavaScript 已经提供了解决方案的情况下，还引入特定的 React API。

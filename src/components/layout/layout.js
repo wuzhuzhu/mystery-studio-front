@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Drawer from 'react-motion-drawer';
 
-import Header from "../header"
 import "./layout.less"
 import "~styles/intro07.less"
 import "~styles/main.css"
@@ -74,7 +73,9 @@ const Layout = ({ children }) => {
         >
           <NavMenu />
         </Drawer>
-        <main id="page-content-wrapper">{children}</main>
+        <main id="page-content-wrapper">
+          {children}
+        </main>
       </div>
     </>
   )

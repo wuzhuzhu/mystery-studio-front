@@ -1,21 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { useTimer } from "../utils/hooks/timer"
 
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-    allFile(filter: { extension: { eq: "md" }}) {
+    allMarkdownRemark(sort: { fields: [ frontmatter___date ] order: DESC} ) {
+    totalCount
     edges {
       node {
-				relativePath
-        prettySize
-        parent {
-          id
+        frontmatter {
+          title
+          description
+          slug
+          date
         }
-        extension
-        birthTime
+        excerpt
       }
     }
   }
@@ -24,8 +25,17 @@ export default () => {
 
   return (
     <div>
+      总量： { data.allMarkdownRemark.totalCount }
       <ul>
-        { data.allFile.edges.map(({ node }, index) => <li key={`file-${index}`}>{index+1}, {node.relativePath}: {node.prettySize}</li>) }
+        {data.allMarkdownRemark.edges.map(
+          ({ node, node: { frontmatter } }, index) =>
+            <Link>
+              <li
+                key={`file-${index}`}>{frontmatter.title}(<small>{frontmatter.date}</small>): {node.excerpt}
+              </li>
+            </Link>,
+        )
+        }
       </ul>
     </div>
   )
