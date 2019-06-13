@@ -7,20 +7,23 @@ import ProjectIntro from '~components/project/project-intro'
 import ProjectContent from '~components/project/project-content'
 import ProjectPagination from '~components/project/project-pagination'
 
+import { useSiteMeta } from "../utils/hooks/queries/useSiteMeta"
+
 const ProjectTemplate = ({ data }) => {
   const { html, frontmatter: {  title, description, category, subCategory, slug ,date }} = data.markdownRemark
+  const { title: siteTitle, description: siteDescription } = useSiteMeta()
   return (
     <Layout>
       <div className="single-project-wrap">
         <Header
-          siteTitle="Mystery studio"
-          desc="觅觉设计工作室"
+          siteTitle={siteTitle}
+          desc={siteDescription}
           whiteBg
         />
       </div>
       <section id="mastwrap" className="mastwrap slant-bottom slant-bottom-color">
         <ProjectIntro {...data.markdownRemark.frontmatter} />
-        <ProjectContent />
+        <ProjectContent {...data.markdownRemark} />
         <ProjectPagination />
       </section>
     </Layout>
@@ -38,6 +41,9 @@ export const query = graphql`
         subCategory
         slug
         date
+        brief
+        storyLeft
+        storyRight
       }
     }
   }

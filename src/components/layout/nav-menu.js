@@ -2,14 +2,18 @@ import React from 'react'
 import { Link } from "gatsby"
 
 import logoImg from '~images/logo.png'
+import BackgroundImage from 'gatsby-background-image'
 
-const NavMenu = () => (
-  <section
-    className="menu-panel menu-bg fullheight"
-    style={{
-      
-    }}
-  >
+import { useMenuBgImg } from "../../utils/hooks/queries/useGatsbyImg"
+
+const NavMenu = () => {
+  const fluid = useMenuBgImg()
+  return (
+    <BackgroundImage
+      Tag="section"
+      className="menu-panel menu-bg fullheight"
+      fluid={fluid}
+    >
     <div className="row">
       <article className="col-md-12 fullheight nav-list-holder">
         <div className="valign">
@@ -42,7 +46,8 @@ const NavMenu = () => (
       </article>
 
     </div>
-  </section>
-)
+    </BackgroundImage>
+  )
+}
 
 export default NavMenu

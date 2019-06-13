@@ -5,10 +5,62 @@ category: "设计"
 subCategory: "建筑"
 slug: "hotel-w-design"
 date: "2019-08-21"
+brief: "无论是一晚散心之旅、一次商务之行、一场家庭欢聚，还是一生只有一次的重要时刻，我们遍布全球近100个国家和地区的5,000多家酒店都可以满足您的不同需求。" 
+storyLeft: "行家会议体验专为洲际酒店会议而设，为与会者提供一系列富有当地特色的体验，凭借我们对酒店所在地的充分了解，打造真正引人入胜且具有个性的会议与活动。这些结合当地特色的体验，经过精心挑选，旨在使与会者保持充沛体力，并确保酒店提供的高水准服务能够满足人们对洲际酒店及度假村品牌的期望。所有活动都是根据不同场合量身设计，从酒店外互动式团建活动到聆听当地特邀嘉宾振奋人心的演讲，或是让与会者参与各种为周围社区和环境做贡献的活动等等。"
+storyRight: "这一体验将前所未有地将与会者们联系起来，加强团队协作。利用酒店所在地的独家特色、历史和地域环境来激发互动，无论是在酒店内还是酒店外，每一次体验都新颖独特，让所有与会者兴致勃勃，以激励和帮助他们建立更高效的工作联系。"
+
 ---
+本Markdown编辑器使用[StackEdit][6]修改而来，用它写博客，将会带来全新的体验哦：
 
-**为什么在组件内部**调用 useEffect？ 将 useEffect 放在组件内部让我们可以在 effect 中直接访问 count state 变量（或其他 props）。我们不需要特殊的 API 来读取它 —— 它已经保存在函数作用域中。Hook 使用了 JavaScript 的闭包机制，而不用在 JavaScript 已经提供了解决方案的情况下，还引入特定的 React API。
+- **Markdown和扩展Markdown简洁的语法**
+- **丰富的快捷键**
 
-useEffect 会在**每次渲染后**都执行吗？ 是的，默认情况下，它在第一次渲染之后和每次更新之后都会执行。（我们稍后会谈到如何控制它。）你可能会更容易接受 effect 发生在“渲染之后”这种概念，不用再去考虑“挂载”还是“更新”。React 保证了每次运行 effect 的同时，DOM 都已经更新完毕。
+-------------------
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
+## Markdown及扩展
+
+> Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank"> [ 维基百科 ]
+
+使用简单的符号标识不同的标题，将某些文字标记为**粗体**或者*斜体*，创建一个[链接](http://www.csdn.net)等，详细语法参考帮助？。
+
+本编辑器支持 **Markdown Extra** , 　扩展了很多好用的功能。具体请参考[Github][2].  
+
+### 表格
+
+**Markdown　Extra**　表格语法：
+
+项目     | 价格
+-------- | ---
+Computer | $1600
+
+可以使用冒号来定义对齐方式：
+
+| 项目      |    价格 | 数量  |
+| :-------- | --------:| :--: |
+| Computer  | 1600 元 |  5   |
+| Phone     |   12 元 |  12  |
+
+### 代码块
+代码块语法遵循标准markdown代码，例如：
+``` python
+@requires_authorization
+def somefunc(param1='', param2=0):
+    '''A docstring'''
+    if param1 > param2: # interesting
+        print 'Greater'
+    return (param2 - param1 + 1) or None
+class SomeClass:
+    pass
+>>> message = '''interpreter
+... prompt'''
+```
+
+## 自定义字体颜色(github中看不到颜色):
+<font color=red>Hello 红色字体</font>
+
+## 删除线
+~~Hello~~
+
+###脚注
+生成一个脚注[^footnote].
+[^footnote]: 这里是 **脚注** 的 *内容*.

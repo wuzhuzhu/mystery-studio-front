@@ -1,67 +1,51 @@
 import React from 'react'
 
-const ProjectContent = () => {
+const ProjectContent = ({ html, frontmatter: { description, brief, storyLeft, storyRight } }) => {
   return (
     <section className="about pad-top pad-bottom white-bg super-space">
       <div className="container">
+
         <div className="row">
           <article className="text-left col-md-12">
-            <h1 className="sub-heading"><span className="dark font4">About Project.</span></h1>
-            <p className="promo-text dark font2 weight-light add-top-quarter black">Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nunc euismod sed libero at congue. Praesent vulputate dolor velit, in
-              condimentum odio pellentesque libero faucibus venenatis sed et quam. Nulla rutrum non tellus in fringilla.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <h1 className="sub-heading"><span className="dark font4">{description}</span></h1>
+            <p className="promo-text dark font2 weight-light add-top-quarter black">
+              { brief }
+            </p>
           </article>
         </div>
 
         <div className="row add-top-quarter">
           <article className="text-left col-md-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod sed libero at congue. Praesent
-              vulputate dolor velit, in condimentum odio pellentesin condimentum odio pellentesque a. Nulla facilisi.
-              Aliquam in justo non libero faucique a. Nulla facilisi. Aliquam in justo non libero faucibus venenatis sed
-              et quam. Nulla rutrum non tellus in fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nunc euismod sed libero at congue.</p>
+            <p>{storyLeft}</p>
           </article>
           <article className="text-left col-md-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod sed libero at congue. Praesent
-              vulputate dolor velit, in condimentum odio pellentesin condimentum odio pellentesque a. Nulla facilisi.
-              Aliquam in justo non libero faucique a. Nulla facilisi. Aliquam in justo non libero faucibus venenatis sed
-              et quam. Nulla rutrum non tellus in fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Nunc euismod sed libero at congue.</p>
+            <p>{storyRight}</p>
           </article>
         </div>
 
         <div className="row add-top-half">
 
           <article className="col-md-12 text-center">
-
-
             <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
-              <ol className="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
-
-              <div className="carousel-inner">
-                <div className="item active">
-                  <img alt="" title="" src="http://placehold.it/1500x1000"/>
-                </div>
-                <div className="item">
-                  <img alt="" title="" src="http://placehold.it/1500x1000"/>
-                </div>
-                <div className="item">
-                  <img alt="" title="" src="http://placehold.it/1500x1000"/>
-                </div>
+              <div className="item">
+                <img alt="" title="" src="http://placehold.it/1500x1000"/>
               </div>
-
-
             </div>
-
-
           </article>
+        </div>
 
 
+        <div className="row add-top-quarter zoom">
+          <article className="col-md-6">
+            <a className="venobox" data-gall="portfolio-gallery" href="http://placehold.it/1000x600">
+              <img alt="" title="" className="img-responsive" src="http://placehold.it/1000x600"/>
+            </a>
+          </article>
+          <article className="col-md-6">
+            <a className="venobox" data-gall="portfolio-gallery" href="http://placehold.it/1000x600">
+              <img alt="" title="" className="img-responsive" src="http://placehold.it/1000x600"/>
+            </a>
+          </article>
         </div>
 
 
@@ -79,22 +63,9 @@ const ProjectContent = () => {
           </article>
 
         </div>
-
-
-        <div className="row add-top-quarter zoom">
-
-          <article className="col-md-6">
-            <a className="venobox" data-gall="portfolio-gallery" href="http://placehold.it/1000x600">
-              <img alt="" title="" className="img-responsive" src="http://placehold.it/1000x600"/>
-            </a>
-          </article>
-          <article className="col-md-6">
-            <a className="venobox" data-gall="portfolio-gallery" href="http://placehold.it/1000x600">
-              <img alt="" title="" className="img-responsive" src="http://placehold.it/1000x600"/>
-            </a>
-          </article>
-
-        </div>
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </section>
   )
