@@ -39,6 +39,7 @@ export const query = graphql`
         description
         category
         subCategory
+        link
         slug
         date
         brief

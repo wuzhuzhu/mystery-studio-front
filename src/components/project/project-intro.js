@@ -3,7 +3,8 @@ import React from 'react'
 const ProjectIntro = ({
   title,
   category,
-  subCategory
+  subCategory,
+  link
                       }) => {
   return (
     <section id="intro" className="intro single-project white-bg pad-bottom-half">
@@ -22,7 +23,7 @@ const ProjectIntro = ({
           <article className="text-left col-md-12">
 
             <div className="btn-wrap">
-              <a className="btn btn-seven btn-seven-dark" href="works-masonry.html">在线预览</a>
+              <a className="btn btn-seven btn-seven-dark" href={link}>在线预览</a>
             </div>
 
           </article>
